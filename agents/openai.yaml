@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub 项目搜集器"
+  short_description: "按星数和类型搜集 GitHub 项目，检查 README 贴题度并兼顾成熟工具"
+  default_prompt: "使用 $github-scout 帮我找 10 个 1000 星以上、与需求贴题的 GitHub 项目，兼顾成熟工具。"

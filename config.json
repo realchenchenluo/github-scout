@@ -1,0 +1,92 @@
+{
+  "defaults": {
+    "preset": "balanced",
+    "category": "all",
+    "min_stars": 1000,
+    "max_stars": null,
+    "active_days": 0,
+    "created_days": 0,
+    "language": null,
+    "license": null,
+    "topics": [],
+    "queries": [],
+    "include_forks": false,
+    "include_archived": false,
+    "limit": 10,
+    "per_query": 50,
+    "sort": "best-match",
+    "profile": "auto",
+    "readme_budget": 30
+  },
+  "presets": {
+    "balanced": {},
+    "established": {
+      "min_stars": 10000,
+      "active_days": 0
+    },
+    "emerging": {
+      "min_stars": 100,
+      "max_stars": 5000,
+      "active_days": 90,
+      "created_days": 365
+    }
+  },
+  "categories": {
+    "all": [""],
+    "ai": ["topic:llm", "topic:generative-ai", "topic:machine-learning"],
+    "devtools": ["topic:developer-tools", "topic:cli", "topic:code-editor"],
+    "automation": ["topic:automation", "topic:workflow-automation", "topic:browser-automation"],
+    "self-hosted": ["topic:self-hosted", "topic:selfhosted"],
+    "data": ["topic:data-engineering", "topic:data-analysis", "topic:database"],
+    "learning": ["topic:tutorial", "topic:awesome", "topic:learning-resources"],
+    "animal-modeling": [
+      "\"animal reconstruction\" in:name,description,readme",
+      "\"quadruped reconstruction\" in:name,description,readme",
+      "creature \"3d\" in:name,description",
+      "\"3d model editor\" in:name,description,readme",
+      "\"3d creation suite\" in:name,description,readme",
+      "\"image-to-3d\" in:name,description"
+    ],
+    "game-ui": [
+      "\"game ui\" in:name,description",
+      "\"ui framework\" unity in:name,description",
+      "\"user interface\" games in:name,description,readme",
+      "ugui in:name,description",
+      "godot ui in:name,description",
+      "\"hud\" \"toolkit\" in:name,description",
+      "\"ui effects\" in:name,description",
+      "particle ugui in:name,description",
+      "\"ui toolkit\" in:name,description"
+    ]
+  },
+  "relevance_profiles": {
+    "animal-modeling": {
+      "direct_groups": [
+        ["animal", "animals", "quadruped", "quadrupeds", "creature", "creatures", "canine", "feline", "dog", "cat", "horse", "动物", "四足", "生物角色"],
+        ["3d", "mesh", "meshes", "modeling", "modelling", "reconstruction", "rigging", "skinning", "建模", "重建", "绑定"]
+      ],
+      "readme_groups": [
+        ["animal", "animals", "quadruped", "quadrupeds", "creature", "creatures", "dog", "cat", "horse", "动物", "四足", "生物角色"],
+        ["3d", "mesh", "meshes", "reconstruction", "modeling", "modelling", "rigging", "建模", "重建", "绑定"]
+      ],
+      "adjacent_phrases": ["3d creation suite", "3d model editor", "model editor for low-poly", "image-to-3d", "image to 3d", "3d generation", "3d asset generation", "3d reconstruction", "3d object generation", "三维建模", "3d 建模"],
+      "review_only_metadata": ["curated list", "curated collection", "categorized collection", "list of", "3d resources", "论文列表", "资料合集"],
+      "exclude_metadata": ["animal health", "veterinary", "pet clinic", "quadruped robot", "quadruped robots", "quadrupedal robots", "robot pet", "robotics", "animal crossing", "decompilation", "animal-island-ui", "动物医疗", "四足机器人", "书单", "书籍", "pdf下载"]
+    },
+    "game-ui": {
+      "direct_groups": [
+        ["ui", "gui", "hud", "user interface", "界面", "用户界面"],
+        ["game", "games", "gaming", "unity", "unreal", "godot", "ugui", "cocos", "laya", "libgdx", "游戏"],
+        ["framework", "library", "toolkit", "editor", "component", "components", "controls", "widget", "widgets", "layout", "menu", "hud", "mask", "masking", "shader", "effect", "effects", "transitions", "corners", "组件", "控件", "框架", "布局", "设计"]
+      ],
+      "readme_groups": [
+        ["ui", "gui", "hud", "user interface", "界面"],
+        ["game", "games", "gaming", "unity", "unreal", "godot", "ugui", "cocos", "libgdx", "游戏"],
+        ["framework", "library", "toolkit", "component", "components", "controls", "widget", "layout", "menu", "hud", "mask", "masking", "shader", "effect", "effects", "transitions", "corners", "组件", "控件", "框架", "布局", "设计"]
+      ],
+      "adjacent_phrases": [],
+      "review_only_metadata": ["curated list", "curated collection", "categorized collection", "list of", "game engine", "desktop", "3d resources", "论文列表", "资料合集"],
+      "exclude_metadata": ["some-many-books", "book list", "book collection", "书单", "书籍", "pdf下载", "game server management", "game server hosting", "server management panel", "unity toolbar", "editor toolbar", "agent harness", "game preservation"]
+    }
+  }
+}
